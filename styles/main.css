@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+svg{
+	width: clamp(20px, 2em, 40px);
+	height: clamp(20px, 2em, 40px);
+}
+
+.bg-header{
+	background: linear-gradient(to right,#44DD8ABB,var(--color-cyan-600)), url("../assets/bg-header.png");
+	background-position: 50% 40%;
+	background-repeat: no-repeat;
+}
