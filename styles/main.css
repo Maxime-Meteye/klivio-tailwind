@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
 
-*{
+html{
 	font-family: "Montserrat", sans-serif;
 }
+
+::placeholder{
+	color: var(--color-orange-50);
+}
+
 
 svg{
 	min-width: 2em;
