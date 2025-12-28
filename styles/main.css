@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 svg{
-	width: clamp(20px, 2em, 40px);
+	min-width: 2em;
 	height: clamp(20px, 2em, 40px);
 }
 
@@ -9,4 +9,75 @@ svg{
 	background: linear-gradient(to right,#44DD8ABB,var(--color-cyan-600)), url("../assets/bg-header.png");
 	background-position: 50% 40%;
 	background-repeat: no-repeat;
+}
+
+
+
+.gradient{
+	background: linear-gradient(to right,#44DD8ABB,var(--color-cyan-600));
+}
+
+.course-list{
+	@apply py-8;
+
+}
+
+.course-list li{
+	@apply rounded-xl  px-3 py-2 border-2 md:border-5 md:max-w-90;
+}
+
+.bg-orange-50 .course-list li{
+	@apply border-blue-950 hover:border-green-400 hover:transform;
+}
+
+.bg-blue-950 .course-list li{
+	@apply border-orange-50 hover:border-green-400 hover:transform;
+}
+
+
+.course-list :has(> svg){
+	@apply flex flex-row justify-center gap-1 bg-blue-950 rounded-md py-1.5;
+}
+
+
+.course-list :has(> span){
+	@apply rounded-2xl p-1 bg-blue-950/70  text-orange-50 justify-self-center ;
+}
+
+.course-list span {
+	@apply rounded-2xl p-1 bg-blue-950/70  text-orange-50 justify-self-center backdrop-blur-md;
+}
+
+.course-illustration{
+	@apply bg-green-400 rounded-sm h-40 p-1;
+}
+
+.course-description{
+	@apply flex flex-col gap-4 
+}
+
+.btn{
+	@apply border-2 rounded-lg px-6 py-1 text-lg cursor-pointer transition-colors duration-150;
+}
+
+
+:is(main,footer) input{
+	@apply rounded-sm border-2;
+}
+
+input,textarea{
+	@apply px-2 py-1 hover:border-green-400;
+}
+
+.btn.gradient{
+	@apply hover:border-cyan-400 hover:text-blue-950;
+}
+
+.bg-blue-950 .btn:hover{
+	@apply border-cyan-400 text-blue-950 bg-orange-50 ;
+}
+
+
+.bg-orange-50 .btn:hover{
+	@apply border-blue-950 text-blue-950 bg-green-400 ;
 }
