@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+*{
+	font-family: "Montserrat", sans-serif;
+}
+
 svg{
 	min-width: 2em;
 	height: clamp(20px, 2em, 40px);
